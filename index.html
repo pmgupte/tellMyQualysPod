@@ -11,9 +11,6 @@
     <title>Tell My Qualys POD</title>
     <script>
       function tellMyQualysPod() {
-        var username = document.getElementById("username").value;
-        console.log("username is " + username);
-        var substr = username.substring(0,6);
         var pod = "Unidentified";
         
         var platform_urls = {
@@ -63,6 +60,10 @@
               "API Gateway": "Unidentified"
           }
         };
+
+        var username = document.getElementById("username").value;
+        console.log("username is " + username);
+        var substr = username.substring(0,6);
         
         if (-1 < substr.indexOf("_")) {
             pod = "US1";
@@ -93,6 +94,9 @@
         }
         
         console.log(platform_urls[pod]);
+        document.getElementById("platform").value = platform_urls[pod]["Platform"];
+        document.getElementById("platform").value = platform_urls[pod]["API Server"];
+        document.getElementById("platform").value = platform_urls[pod]["API Gateway"];
       }
     </script>
   </head>
