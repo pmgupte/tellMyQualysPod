@@ -207,14 +207,14 @@ body {
   </head>
   <body>
     <form>
-      <div class="form-group">
-      <label for="username">Your Qualys Username</label>
-      <input type="text" class="form-control" id="username" aria-describedby="usernameHelp">
+      <div class="form-label-group">
+      <input type="text" class="form-control" id="username" placeholder="Your Qualys Username" aria-describedby="usernameHelp">
       <small id="usernameHelp" class="form-text text-muted">Don't worry, We'll never store or share your username with anyone else.</small>
     </div>
     <button type="button" class="btn btn-primary" onclick="tellMyQualysPod()">Tell My Qualys POD</button>
   </form>
     
+   <div class="text-center mb-4">
     <table class="table table-striped">
   <tbody>
     <tr>
@@ -231,6 +231,8 @@ body {
     </tr>
   </tbody>
 </table>
+    </div>
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
