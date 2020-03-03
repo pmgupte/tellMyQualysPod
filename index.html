@@ -112,30 +112,41 @@ body {
     </script>
   </head>
   <body>
-    <form>
-      <div class="form-group">
-      <input type="text" class="form-control" id="username" placeholder="Your Qualys Username" aria-describedby="usernameHelp">
-      <small id="usernameHelp" class="form-text text-muted">Don't worry, We'll never store or share your username with anyone else.</small>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="username" placeholder="Your Qualys Username" aria-describedby="usernameHelp">
+              <small id="usernameHelp" class="form-text text-muted">Don't worry, We'll never store or share your username with anyone else.</small>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="tellMyQualysPod()">Tell My Qualys POD</button>
+          </form>
+        </div>
       </div>
-      <button type="button" class="btn btn-primary" onclick="tellMyQualysPod()">Tell My Qualys POD</button>
-    </form>
+      
+      <div class="row">
+        <div class="col">
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th scope="row">Platform</th>
+                <td id="platform"><small class="form-text text-muted">Enter username and click button</small></td>
+              </tr>
+              <tr>
+                <th scope="row">API Server</th>
+                <td id="apiserver"><small class="form-text text-muted">Enter username and click button</small></td>
+              </tr>
+              <tr>
+                <th scope="row">API Gateway</th>
+                <td id="apigateway"><small class="form-text text-muted">Enter username and click button</small></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
     
-    <table class="table table-striped">
-  <tbody>
-    <tr>
-      <th scope="row">Platform</th>
-      <td id="platform"><small class="form-text text-muted">Enter username and click button</small></td>
-    </tr>
-    <tr>
-      <th scope="row">API Server</th>
-      <td id="apiserver"><small class="form-text text-muted">Enter username and click button</small></td>
-    </tr>
-    <tr>
-      <th scope="row">API Gateway</th>
-      <td id="apigateway"><small class="form-text text-muted">Enter username and click button</small></td>
-    </tr>
-  </tbody>
-</table>
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
