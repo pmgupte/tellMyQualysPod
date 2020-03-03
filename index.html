@@ -9,6 +9,92 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Tell My Qualys POD</title>
+    <script>
+      function tellMyQualysPod() {
+        var username = document.getElementById("username").value;
+        console.log("username is " + username);
+        var substr = username.substring(0,6);
+        var pod = "Unidentified";
+        
+        var platform_urls = {
+          "US1": {
+            "Platform": "https://qualysguard.qualys.com",
+            "API Server": "https://qualysapi.qualys.com",
+            "API Gateway": "https://gateway.qg1.apps.qualys.com"
+          },
+          "US2": {
+              "Platform": "https://qualysguard.qg2.apps.qualys.com",
+              "API Server": "https://qualysapi.qg2.apps.qualys.com",
+              "API Gateway": "	https://gateway.qg2.apps.qualys.com"
+          },
+          "US3": {
+              "Platform": "https://qualysguard.qg3.apps.qualys.com",
+              "API Server": "https://qualysapi.qg3.apps.qualys.com",
+              "API Gateway": "https://gateway.qg3.apps.qualys.com"
+          },
+          "US4": {
+              "Platform": "https://qualysguard.qg4.apps.qualys.com",
+              "API Server": "https://qualysapi.qg4.apps.qualys.com",
+              "API Gateway": "https://gateway.qg4.apps.qualys.com"
+          },
+          "EU1": {
+              "Platform": "https://qualysguard.qualys.eu",
+              "API Server": "https://qualysapi.qualys.eu",
+              "API Gateway": "https://gateway.qg1.apps.qualys.eu"
+          },
+          "EU2": {
+              "Platform": "https://qualysguard.qg2.apps.qualys.eu",
+              "API Server": "https://qualysapi.qg2.apps.qualys.eu",
+              "API Gateway": "https://gateway.qg2.apps.qualys.eu"
+          },
+          "IN1": {
+              "Platform": "https://qualysguard.qg1.apps.qualys.in",
+              "API Server": "https://qualysapi.qg1.apps.qualys.in",
+              "API Gateway": "https://gateway.qg1.apps.qualys.in"
+          },
+          "CA1": {
+              "Platform": "https://qualysguard.qg1.apps.qualys.ca",
+              "API Server": "https://qualysapi.qg1.apps.qualys.ca",
+              "API Gateway": "https://gateway.qg1.apps.qualys.ca"
+          },
+          "Unidentified": {
+              "Platform": "Could not identify the shared POD. Is it a PCP?",
+              "API Server": "Unidentified",
+              "API Gateway": "Unidentified"
+          }
+        };
+        
+        if (-1 < substr.indexOf("_")) {
+            pod = "US1";
+        }
+        else if( -1 < substr.indexOf("2")) {
+            pod = "US2";
+        }
+        else if( -1 < substr.indexOf("3")) {
+            pod = "US3";
+        }
+        else if( -1 < substr.indexOf("4")) {
+            pod = "US4";
+        }
+        else if( -1 < substr.indexOf("-")) {
+            pod = "EU1";
+        }
+        else if( -1 < substr.indexOf("5") || -1 < substr.indexOf("!")) {
+            pod = "EU2";
+        }
+        else if( -1 < substr.indexOf("8")) {
+            pod = "IN1";
+        }
+        else if( -1 < substr.indexOf("9")) {
+            pod = "CA1";
+        }
+        else {
+            pod = "Unidentified";
+        }
+        
+        console.log(platform_urls[pod]);
+      }
+    </script>
   </head>
   <body>
     <h1>Tell My Qualys POD</h1>
