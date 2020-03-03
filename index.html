@@ -107,9 +107,9 @@ body {
         }
         
         console.log(platform_urls[pod]);
-        document.getElementById("platform").innerHTML = platform_urls[pod]["Platform"];
-        document.getElementById("apiserver").innerHTML = platform_urls[pod]["API Server"];
-        document.getElementById("apigateway").innerHTML = platform_urls[pod]["API Gateway"];
+        document.getElementById("platform").innerHTML = "<a href='" + platform_urls[pod]["Platform"] + "'>" + platform_urls[pod]["Platform"] + "</a>";
+        document.getElementById("apiserver").innerHTML = "<a href='" + platform_urls[pod]["API Server"] + "'>" + platform_urls[pod]["API Server"] + "</a>";
+        document.getElementById("apigateway").innerHTML = "<a href='" + platform_urls[pod]["API Gateway"] + "'>" + platform_urls[pod]["API Gateway"] + "</a>";
       }
     </script>
   </head>
