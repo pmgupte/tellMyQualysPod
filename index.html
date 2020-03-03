@@ -94,9 +94,9 @@
         }
         
         console.log(platform_urls[pod]);
-        document.getElementById("platform").value = platform_urls[pod]["Platform"];
-        document.getElementById("platform").value = platform_urls[pod]["API Server"];
-        document.getElementById("platform").value = platform_urls[pod]["API Gateway"];
+        document.getElementById("platform").innerHTML = platform_urls[pod]["Platform"];
+        document.getElementById("apiserver").innerHTML = platform_urls[pod]["API Server"];
+        document.getElementById("apigateway").innerHTML = platform_urls[pod]["API Gateway"];
       }
     </script>
   </head>
