@@ -107,7 +107,7 @@ body {
         }
         
         console.log(platform_urls[pod]);
-        document.getElementById("platform").innerHTML = "<a href='" + platform_urls[pod]["Platform"] + "'>" + pod + "</a>";
+        document.getElementById("platform").innerHTML = pod;
         document.getElementById("platform_url").innerHTML = "<a href='" + platform_urls[pod]["Platform"] + "'>" + platform_urls[pod]["Platform"] + "</a>";
         document.getElementById("apiserver_url").innerHTML = "<a href='" + platform_urls[pod]["API Server"] + "'>" + platform_urls[pod]["API Server"] + "</a>";
         document.getElementById("apigateway_url").innerHTML = "<a href='" + platform_urls[pod]["API Gateway"] + "'>" + platform_urls[pod]["API Gateway"] + "</a>";
